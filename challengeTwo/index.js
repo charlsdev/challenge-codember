@@ -17,4 +17,4 @@ encrypt.split(' ').forEach((data) => {
   message += ' '
 })
 
-console.log(message.trim())
+console.log(`submit ${message.trim()}`);
