@@ -1,0 +1,23 @@
+{
+  "name": "codember",
+  "version": "1.0.0",
+  "description": "Mis soluciones de los retos semanales de [Codember](https://codember.dev/) realizado por el Gran Midudev para que la comunidad mueva las manitos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlsdev/challenge-codember.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlsdev/challenge-codember/issues"
+  },
+  "homepage": "https://github.com/charlsdev/challenge-codember#readme",
+  "devDependencies": {
+    "eslint": "^8.28.0"
+  }
+}
