@@ -1,6 +1,6 @@
-import fs from "fs";
+const fs = require('fs')
 
-const data = fs.readFileSync('colors.txt', 'utf-8');
+const data = fs.readFileSync('colors.txt', 'utf-8')
 const array = JSON.parse(data)
 
 function countColors(array) {

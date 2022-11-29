@@ -1,15 +1,14 @@
-import fs from "fs";
+const fs = require('fs')
 
-var line = '', numLine = 0
-const newArray = [], data = fs.readFileSync('users.txt', 'utf-8');
-const structure = ['usr', 'eme', 'psw', 'age', 'loc', 'fll'];
+var line = ''
+const newArray = [], data = fs.readFileSync('users.txt', 'utf-8')
+const structure = ['usr', 'eme', 'psw', 'age', 'loc', 'fll']
 
 const lines = data.split(/\r\n/g)
 
 lines.forEach(item => {
    if (item == '') {
       newArray.push(line)
-      numLine = 0
       line = ''
    } else {
       line += ` ${item}`
@@ -18,19 +17,19 @@ lines.forEach(item => {
 
 const dataJS = newArray.map(item => {
    const data = item.trim().split(' ')
-   const itemObj = {};
+   const itemObj = {}
 
    for (const itemUs of data) {
-      const [key, value] = itemUs.split(':');
+      const [key, value] = itemUs.split(':')
       itemObj[key] = value
    }
 
-   return itemObj;
+   return itemObj
 })
 
 const userValidate = dataJS
-      .filter(user => structure.every(fields => fields in user));
+   .filter(user => structure.every(fields => fields in user))
 
-console.log(userValidate.length);
-console.log(userValidate.at(-1));
-console.log(`submit ${userValidate.length}${userValidate.at(-1).usr}`);
+console.log(userValidate.length)
+console.log(userValidate.at(-1))
+console.log(`submit ${userValidate.length}${userValidate.at(-1).usr}`)

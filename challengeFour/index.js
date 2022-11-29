@@ -5,13 +5,13 @@ const solutions = [],
 
 const validNumber = (num) => {
    if (!rgxTest.test(num)) return false
-   
+
    const numSplit = String(num).split('')
-   
+
    for(let a = 0; a <= numSplit.length; a++){
       if(numSplit[a] > numSplit[a + 1]) return false
    }
-   
+
    return true
 }
 
